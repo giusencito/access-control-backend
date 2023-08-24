@@ -1,0 +1,3 @@
+{"_id":1,"username":"admin","password":"$2a$10$0IHijoqbG.hNsWjvX6LJ9O0b2GUXeQjMkkPm03fmA.LCVrBtO9Dty","roles":["ROL_ADMIN"],"_class":"com.dasser.ControlAccess.backend.domain.model.entity.User"}
+{"_id":2,"username":"user14","password":"$2a$10$buElpcB6JLy0H11bgEHhnuwbF05gNcKMuChRlsh4w10.OU/QvN0Cu","roles":["ROLE_NORMAL"],"_class":"com.dasser.ControlAccess.backend.domain.model.entity.User"}
+{"_id":3,"username":"user12","password":"$2a$10$FEJf3GVwO.Ys9Gd2ZE6IPeLXBVHNmDR7dtPnqVcZjD3luqZKitRHi","roles":["ROLE_NORMAL"],"_class":"com.dasser.ControlAccess.backend.domain.model.entity.User"}

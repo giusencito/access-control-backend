@@ -3,6 +3,7 @@ package com.dasser.ControlAccess.backend.domain.model.entity;
 import com.dasser.ControlAccess.backend.domain.model.enumeration.RolName;
 import lombok.*;
 
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
@@ -23,6 +24,7 @@ public class User {
     private Long id;
     @NotNull
     @NotBlank
+    @Indexed(unique = true)
     private String username;
     @NotNull
     @NotBlank

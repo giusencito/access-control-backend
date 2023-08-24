@@ -56,7 +56,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
                 "Api for ControlAccess developers",
                 "1.0",
                 "http://codmind.com/terms",
-                new Contact("Dasser", "https://fortlom-landing-page-isw.web.app", "javaboys@gmail.com"),
+                new Contact("Dasser", "", ""),
                 "LICENSE",
                 "LICENSE URL",
                 Collections.emptyList()

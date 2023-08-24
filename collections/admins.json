@@ -1,0 +1,1 @@
+{"_id":1,"username":"admin","password":"$2a$10$0IHijoqbG.hNsWjvX6LJ9O0b2GUXeQjMkkPm03fmA.LCVrBtO9Dty","roles":["ROL_ADMIN"],"_class":"com.dasser.ControlAccess.backend.domain.model.entity.Admin"}

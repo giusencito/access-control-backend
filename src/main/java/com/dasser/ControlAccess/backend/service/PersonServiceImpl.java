@@ -14,10 +14,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 
 @Service
@@ -31,19 +28,27 @@ public class PersonServiceImpl implements PersonService {
     UserRepository userRepository;
     @Override
     public Person update(Long userId, Person request) {
-        return personRepository.findById(userId).map(user->{
+        return personRepository.findById(userId).map(person->{
             Date date = new Date();
-            user.setUpdatedAt(date);
-            user.setUsername((request.getUsername()));
-            user.setState(request.getState());
-            if(request.getPassword()!=user.getPassword()){
-                user.setPassword(passwordEncoder.encode(request.getPassword()));
-            }
+            person.setUpdatedAt(date);
+            person.setUsername((request.getUsername()));
+            person.setName((request.getName()));
+
+            person.setState(request.getState());
+            User user= userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException(ENTITY, userId));
+
+
+            person.setPassword(passwordEncoder.encode(request.getPassword()));
+            user.setPassword(passwordEncoder.encode(request.getPassword()));
 
 
 
-            personRepository.save(user);
-            return  user;
+            user.setUsername(request.getUsername());
+
+            userRepository.save(user);
+            personRepository.save(person);
+
+            return  person;
         }).orElseThrow(() -> new ResourceNotFoundException(ENTITY, userId));
     }
 
