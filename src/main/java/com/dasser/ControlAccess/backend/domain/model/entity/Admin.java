@@ -1,12 +1,12 @@
 package com.dasser.ControlAccess.backend.domain.model.entity;
 
 
+import jakarta.persistence.Entity;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+
+
 
 @Getter
 @Setter

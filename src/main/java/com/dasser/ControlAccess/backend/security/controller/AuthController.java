@@ -6,12 +6,13 @@ import com.dasser.ControlAccess.backend.security.Dto.jwtDto;
 import com.dasser.ControlAccess.backend.security.service.AuthService;
 import com.dasser.ControlAccess.shared.exception.Message;
 import io.swagger.annotations.ApiOperation;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+
 
 @RestController
 @CrossOrigin

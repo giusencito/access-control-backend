@@ -1,6 +1,7 @@
 package com.dasser.ControlAccess.backend.security.service;
 
 import com.dasser.ControlAccess.backend.domain.model.entity.User;
+import com.dasser.ControlAccess.backend.domain.persistence.UserRepository;
 import com.dasser.ControlAccess.backend.domain.service.UserService;
 import com.dasser.ControlAccess.backend.security.Principal.PrincipalUser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,10 @@ import java.util.Optional;
 @Service
 public class UserDetailsImpl implements UserDetailsService {
     @Autowired
-    UserService userService;
+    UserRepository userRepository;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<User> value=userService.getbyUserName(username);
+        Optional<User> value=userRepository.findByUsername(username);
         if (value.isPresent()){
             return PrincipalUser.build(value.get());
         }

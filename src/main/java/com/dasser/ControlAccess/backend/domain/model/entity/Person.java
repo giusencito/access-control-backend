@@ -2,14 +2,16 @@ package com.dasser.ControlAccess.backend.domain.model.entity;
 
 import com.dasser.ControlAccess.backend.domain.model.enumeration.State;
 
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+
+
 import java.util.Date;
 
 

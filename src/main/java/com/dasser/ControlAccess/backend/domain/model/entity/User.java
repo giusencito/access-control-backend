@@ -1,15 +1,16 @@
 package com.dasser.ControlAccess.backend.domain.model.entity;
 
 import com.dasser.ControlAccess.backend.domain.model.enumeration.RolName;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

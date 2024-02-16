@@ -20,7 +20,6 @@ import java.util.List;
 import springfox.documentation.builders.RequestHandlerSelectors;
 
 @Configuration
-@EnableSwagger2
 @EnableWebMvc
 public class SwaggerConfig implements WebMvcConfigurer {
 
